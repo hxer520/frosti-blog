@@ -1,0 +1,38 @@
+<!-- CSS -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.8.3/Artalk.css"
+  rel="stylesheet"
+/>
+
+<!-- Artalk -->
+<div id="Comments"></div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    function loadTwikoo() {
+      const commentsContainer = document.getElementById("Comments");
+      if (commentsContainer) {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdnjs.cloudflare.com/ajax/libs/artalk/2.8.3/Artalk.js";
+        script.async = true;
+        script.onload = () => {
+          // 在脚本加载完成后初始化评论工具
+          const initScript = document.createElement('script');
+          initScript.innerHTML = `
+          Artalk.init({
+            el: "#Comments", // 绑定元素的 Selector
+            pageKey: "", // 固定链接 (留空自动获取)
+            pageTitle: "", // 页面标题 (留空自动获取)
+            server: "https://artalk.luoyu.pro/", // 后端地址
+            site: "frosti-astro", // 你的站点名
+          });
+          `;
+        document.body.appendChild(initScript);
+        };
+        document.body.appendChild(script);
+      }
+    }
+    loadTwikoo();
+  });
+</script>
