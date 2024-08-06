@@ -12,8 +12,8 @@ export const USER_NAME = "Ringo";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://twikoo.fengtuanz.cn";
-export const TRANSITION_API = false;
+export const SERVER_URL = "https://waline-1-r6988004.deta.app/";
+export const TRANSITION_API = true;
 
 // Some informative text on the site
 export const infoTest = {
