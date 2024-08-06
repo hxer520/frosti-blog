@@ -13,7 +13,7 @@ export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
 export const SERVER_URL = "https://twikoo.fengtuanz.cn";
-export const TRANSITION_API = true;
+export const TRANSITION_API = false;
 
 // Some informative text on the site
 export const infoTest = {
